@@ -24,19 +24,27 @@ export default defineConfig(({ mode }) => ({
       },
       shared: {
         react: {
-          singleton: true,
+          shareConfig: {
+            singleton: true,
+          },
           requiredVersion: '^18.3.1'
         },
         'react-dom': {
-          singleton: true,
+          shareConfig: {
+            singleton: true,
+          },
           requiredVersion: '^18.3.1'
         },
         '@auth0/auth0-react': {
-          singleton: true,
+          shareConfig: {
+            singleton: true,
+          },
           requiredVersion: '^2.2.4'
         },
         'react-router-dom': {
-          singleton: true,
+          shareConfig: {
+            singleton: true,
+          },
           requiredVersion: '^6.26.2'
         }
       }
