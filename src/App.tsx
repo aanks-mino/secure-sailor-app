@@ -15,6 +15,9 @@ import { federationEvents } from "./utils/federationEvents";
 
 const queryClient = new QueryClient();
 
+// Define the base path
+const basePath = "/secure-sailor-app";
+
 const App = () => {
   useEffect(() => {
     // Example of subscribing to an event from the host
@@ -37,14 +40,14 @@ const App = () => {
       domain="tetrifox.eu.auth0.com"
       clientId="JdOGTLfu3iQSU0m9LdT6BeWCfWp54ZUL"
       authorizationParams={{
-        redirect_uri:  window.location.origin + 'secure-sailor-app'
+        redirect_uri: window.location.origin + basePath
       }}
     >
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          <BrowserRouter basename={basePath}>
             <Routes>
               <Route element={<Layout />}>
                 <Route path="/" element={<Index />} />
