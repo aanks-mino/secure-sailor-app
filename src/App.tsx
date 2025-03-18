@@ -37,7 +37,7 @@ const App = () => {
       domain="tetrifox.eu.auth0.com"
       clientId="JdOGTLfu3iQSU0m9LdT6BeWCfWp54ZUL"
       authorizationParams={{
-        redirect_uri:  window.location.origin + '/wonderkind-flux-think'
+        redirect_uri:  window.location.origin
       }}
     >
       <QueryClientProvider client={queryClient}>
