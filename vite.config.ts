@@ -21,30 +21,23 @@ export default defineConfig(({ mode }) => ({
       exposes: {
         './App': './src/App.tsx',
         './ProtectedRoute': './src/components/ProtectedRoute.tsx',
+        './federationEvents': './src/utils/federationEvents.ts'
       },
       shared: {
         react: {
-          shareConfig: {
-            singleton: true,
-          },
+          eager: true,
           requiredVersion: '^18.3.1'
         },
         'react-dom': {
-          shareConfig: {
-            singleton: true,
-          },
+          eager: true,
           requiredVersion: '^18.3.1'
         },
         '@auth0/auth0-react': {
-          shareConfig: {
-            singleton: true,
-          },
+          eager: true,
           requiredVersion: '^2.2.4'
         },
         'react-router-dom': {
-          shareConfig: {
-            singleton: true,
-          },
+          eager: true,
           requiredVersion: '^6.26.2'
         }
       }
