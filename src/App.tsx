@@ -37,6 +37,7 @@ const App = () => {
 
   return (
     <Auth0Provider
+      cacheLocation="localstorage"
       domain="tetrifox.eu.auth0.com"
       clientId="JdOGTLfu3iQSU0m9LdT6BeWCfWp54ZUL"
       authorizationParams={{
