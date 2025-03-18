@@ -7,14 +7,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  server: {
-    host: "::",
-    port: 8080,
-  },
+  
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
     federation({
       name: 'auth_remote',
       filename: 'remoteEntry.js',
@@ -49,6 +44,9 @@ export default defineConfig(({ mode }) => ({
     },
   },
   base: "/secure-sailor-app/",
+  server: {
+    cors: true,
+  },
   build: {
     modulePreload: false,
     target: 'esnext',
