@@ -34,8 +34,8 @@ const App = () => {
 
   return (
     <Auth0Provider
-      domain="dev-example.auth0.com"
-      clientId="your-client-id"
+      domain="tetrifox.eu.auth0.com"
+      clientId="JdOGTLfu3iQSU0m9LdT6BeWCfWp54ZUL"
       authorizationParams={{
         redirect_uri: window.location.origin
       }}
