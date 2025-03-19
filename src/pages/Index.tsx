@@ -9,8 +9,9 @@ const Index = () => {
     <div className="min-h-[calc(100vh-64px)] flex items-center justify-center">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          Welcome to YourApp
+        Module Federation Remote App on different domain
         </h1>
+        <p>React Version: {React.version}</p>
         <p className="text-xl text-gray-600">
           {isAuthenticated
             ? "You're signed in! Check out your profile."
